@@ -1,5 +1,6 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const path = require('path');
 module.exports = {
   mode: 'development',
   entry: './index.js',
@@ -8,13 +9,27 @@ module.exports = {
     filename: 'builder.js'
   }, 
   module: {
-
+    rules: [
+      {
+        test: /\.css/,
+        use: "css-loader"
+      },
+      {
+        test: /\.vue$/,
+        use: "vue-loader"
+      },
+      {
+        test: /\.stylus$/,
+        use: ['css-loader','style-loader','stylus-loader']
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname,'index.html'),
       filename: 'index.html'
-    })
+    }),
+    new VueLoaderPlugin()
   ],
   resolve: {
     alias: {

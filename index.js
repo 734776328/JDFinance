@@ -1,8 +1,6 @@
 import vue from 'vue'
-
+import app from './src/app.vue'
 new vue({
   el: '#app',
-  data: {
-    hello: 'zhang'
-  }
+  render: h => h(app)
 })
