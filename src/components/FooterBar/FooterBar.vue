@@ -36,13 +36,16 @@ export default {
 <style lang="stylus" rel="stylesheet/stylus">
   .footer-bar
     width 100%
-    overflow hidden
+    height .5rem
     text-align center
-    position absolute
-    bottom: 100%-50px;
+    position fixed
+    bottom: 0
+    left 0
+    background-color #ffffff
     li
       float left
       width 20%
+      padding-top 0.07rem
       img 
         height .22rem
         width .22rem

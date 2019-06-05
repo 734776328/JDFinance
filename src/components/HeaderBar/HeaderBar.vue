@@ -18,19 +18,20 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   .header-bar
     overflow hidden
-    height 0.5rem
-    line-height 0.5rem
+    height 0.45rem
+    line-height 0.45rem
     border-bottom 1px solid #cccccc
+    border-top 1px solid #cccccc
     .come-back
-      float left 
-      height 0.5rem
+      height .45rem
+      float left
       padding-left 0.12rem
     .more
+      height .45rem
       float right
-      height 0.5rem
       padding-right 0.12rem
     .center
       text-align center
