@@ -1,17 +1,23 @@
 <template>
-  <div>省钱</div>
+  <div>
+    home
+  </div>
 </template>
 
 <script>
 export default {
+  
   data () {
     return {
       
     }
+  },
+  components: {
+
   }
 }
 </script>
 
-<style>
+<style lang="stylus">
 
 </style>

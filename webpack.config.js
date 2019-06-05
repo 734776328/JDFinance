@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.css/,
-        use: "css-loader"
+        use: ['style-loader','css-loader']
       },
       {
         test: /\.vue$/,
@@ -20,7 +20,15 @@ module.exports = {
       },
       {
         test: /\.stylus$/,
-        use: ['css-loader','style-loader','stylus-loader']
+        use: ['style-loader','css-loader','stylus-loader']
+      },
+      {
+        test: /\.less$/,
+        use: ['style-loader','css-loader','less-loader']
+      },
+      {
+        test: /\.eot$|\.svg$|\.ttf$|\.woff$|\.woff2$/,
+        use: ['url-loader']
       }
     ]
   },

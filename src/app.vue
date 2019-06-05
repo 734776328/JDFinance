@@ -1,36 +1,34 @@
 <template>
-  <div>
-    <div class="footer-bar">
-      <HOME></HOME>
-      <MAKEMONEY></MAKEMONEY>
-      <BORROWMONEY></BORROWMONEY>
-      <SAVEMONEY></SAVEMONEY>
-      <VIP></VIP>
-    </div>
+  <div class="mian">
+    <!-- 头部 -->
+    <HeaderBar></HeaderBar>
+
+    <!-- 中心内容区 -->
+    <router-view></router-view>
+
+    <!-- 底部 -->
+    <FooterBar></FooterBar>
   </div>
 </template>
 
 <script>
-import HOME from './page/home/home.vue'
-import MAKEMONEY from './page/makeMoney/makeMoney.vue'
-import BORROWMONEY from './page/borrowMoney/borrowMoney.vue'
-import SAVEMONEY from './page/saveMoney/saveMoney.vue'
-import VIP from './page/vip/vip.vue'
+import HeaderBar from './components/HeaderBar/HeaderBar.vue'
+import FooterBar from './components/FooterBar/FooterBar.vue'
 export default {
+  
   data () {
     return {
       name: 'zhang'
     }
   },
   components: {
-    HOME,
-    MAKEMONEY,
-    BORROWMONEY,
-    SAVEMONEY,
-    VIP
+    HeaderBar,
+    FooterBar,
   }
 }
 </script>
 
 <style lang="stylus">
+  .mian
+    position relative
 </style>
