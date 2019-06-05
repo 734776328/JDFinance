@@ -13,6 +13,7 @@ export default {
 <style lang="stylus" scoped>
   .fater
     height .55rem
-    line-height .16rem
+    line-height .55rem
     overflow hidden
+    text-align center
 </style>

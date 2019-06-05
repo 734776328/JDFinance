@@ -1,34 +1,34 @@
 <template>
-  <div class="mian">
-    <!-- 头部 -->
-    <HeaderBar></HeaderBar>
-
-    <!-- 中心内容区 -->
-    <router-view></router-view>
-
-    <!-- 底部 -->
-    <FooterBar></FooterBar>
+  <div class="fater">
+    <Classify></Classify>
+    <Classify></Classify>
+    <FinancingChoice></FinancingChoice>
+    <Insurance></Insurance>
+    <BountyMission></BountyMission>
+    <NewProduct></NewProduct>
+    <CopyRight></CopyRight>
   </div>
 </template>
 
 <script>
-import HeaderBar from '../../components/HeaderBar/HeaderBar.vue'
-import FooterBar from '../../components/FooterBar/FooterBar.vue'
+import Classify from '../../components/Classify/Classify.vue'
+import FinancingChoice from '../../components/FinancingChoice/FinancingChoice.vue'
+import Insurance from '../../components/Insurance/Insurance.vue'
+import BountyMission from '../../components/BountyMission/BountyMission.vue'
+import NewProduct from '../../components/NewProduct/NewProduct.vue'
+import CopyRight from '../../components/CopyRight/CopyRight.vue'
 export default {
-  
-  data () {
-    return {
-      name: 'zhang'
-    }
-  },
   components: {
-    HeaderBar,
-    FooterBar,
+    Classify,
+    FinancingChoice,
+    Insurance,
+    BountyMission,
+    NewProduct,
+    CopyRight
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .mian
-    position relative
+
 </style>

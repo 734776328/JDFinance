@@ -1,48 +1,54 @@
 <template>
-  <div class="slide-fater">
-    <ul>
-      <li>
-        <div>
-          <img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/19965/4/1946/28370/5c18958aE9e8a930d/9810bed7979e6bd5.jpg?width=210&height=260" alt="">
-          <p>{{title}}</p>
-          <p>{{desc}}</p>
-        </div>
-      </li>
-      <li>
-          <img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/27283/39/2034/26756/5c1895b5Ecbfdf7ed/6a0755f1f40e2eb9.jpg?width=210&height=260" alt="">
-          <p>{{title}}</p>
-          <p>{{desc}}</p>
-      </li>
-      <li>
-          <img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/27014/35/2022/24897/5c1895d9Ef095679a/c0918d244bbfb2e5.jpg?width=210&height=260" alt="">
-          <p>{{title}}</p>
-          <p>{{desc}}</p>
-      </li>
-      <li>
-          <img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/19150/30/2037/31576/5c1895f2Eb431149e/7a71e063250f8b0d.jpg?width=210&height=260" alt="">
-          <p>{{title}}</p>
-          <p>{{desc}}</p>
-      </li>
-      <li>
-          <img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/9279/3/9618/27165/5c189693E5d54e2cb/c263629839992767.jpg?width=210&height=260" alt="">
-          <p>{{title}}</p>
-          <p>{{desc}}</p>
-      </li>
-    </ul>
-    
-    
-    
-    
-    
+  <div class="slide-fater" ref="wrapper">
+      <ul ref="content">
+        <li v-for="item in center" :key="item.imgUrl">
+            <img :src="item.imgUrl">
+        </li>
+      </ul>
   </div>
 </template>
 
 <script>
+import BScroll from '@better-scroll/core'
+import { setTimeout } from 'timers';
+
 export default {
-  props: ['title','desc']
+  props: ['title','center'],
+  data () {
+    return {
+
+    }
+  },
+  methods: {
+    //动态计算ul的宽度
+    computedWidth (count) {
+      this.$refs.content.style.width = count * 125 + count * 16 + 16 + 'px' 
+    }
+  },
+  mounted () {
+    //创建 botter-scroll 
+    console.log(this.$refs.wrapper)
+    setTimeout(()=>{
+      let bs = new BScroll(this.$refs.wrapper, {
+      scrollX: true,
+      click: true
+    })
+    },2000)
+
+    //调用computedWidth()计算width
+    this.computedWidth(this.center.length)
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-  
+  .slide-fater
+    overflow hidden
+    width 100%
+    white-space: nowrap;
+    li
+      display inline-block
+      padding-left .16rem
+      img
+        width 1.25rem
 </style>

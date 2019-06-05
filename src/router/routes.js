@@ -1,15 +1,19 @@
+import Main from '../views/Main/index.vue'
 import Home from '../views/Home/Home.vue'
-import CenterContent from '../views/Home/CenterContent/CenterContent.vue'
+import MakeMoney from '../views/MakeMoney/MakeMoney.vue'
+import BorrowMoney from '../views/BorrowMoney/BorrowMoney.vue'
 export default [
   {
     path: '/',
-    redirect: '/home/center', 
+    redirect: '/main', 
   },
   {
-    path: '/home',
-    component: Home,
+    path: '/main',
+    component: Main,
     children: [
-      {path: 'center', component: CenterContent}
+      {path: 'home', component: Home},
+      {path: 'makemoney',component: MakeMoney},
+      {path: 'borrowmoney',component: BorrowMoney}
     ]
   }
 ]
