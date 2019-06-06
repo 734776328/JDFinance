@@ -32,9 +32,9 @@ export default {
     width 100%
     height 1rem
     text-align center
-    inline-height 1rem
     overflow hidden
     padding 0.2rem 0
+    background-color #FFFFFF
     li
       width 25%
       float left 

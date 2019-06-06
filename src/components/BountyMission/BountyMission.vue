@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Banner :title="'赏金任务'"></Banner>
+    <Banner :title="'赏金任务'" ></Banner>
     <PhotoSlide :center="center"></PhotoSlide>
   </div>
 </template>

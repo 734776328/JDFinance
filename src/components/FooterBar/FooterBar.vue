@@ -50,6 +50,7 @@ export default {
     color #BDBFC5
     border-top 1px solid #EEEEEE
     box-shadow 0 -3px 4px rgba(0,0,0,.03);
+    z-index 9999
     ul
       overflow hidden
       li

@@ -13,7 +13,7 @@ import BScroll from '@better-scroll/core'
 import { setTimeout } from 'timers';
 
 export default {
-  props: ['title','center'],
+  props: ['center'],
   data () {
     return {
 

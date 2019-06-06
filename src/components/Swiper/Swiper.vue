@@ -37,7 +37,7 @@ export default {
         el: '.swiper-pagination',
       },
     })
-    },1000)
+    },0)
   }
 }
 </script>
