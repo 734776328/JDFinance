@@ -1,13 +1,15 @@
 <template>
-  <div>
+  <div class="white-bar-fater">
     <Banner :isshow="true" :title="'白条'" :centent="'年轻不留白 >'"/>
-    <WhiteBarInfo :whiteItem="whiteItem"/>
+    <MenuBar :whiteItem="whiteItem">
+      <span>小白信用分</span>
+    </MenuBar>
   </div>
 </template>
 
 <script>
 import Banner from '../../../components/Banner/Banner.vue'
-import WhiteBarInfo from '../WhiteBarInfo/WhiteBarInfo.vue'
+import MenuBar from '../MenuBar/MenuBar.vue'
 export default {
   data () {
     return {
@@ -45,7 +47,7 @@ export default {
   },
   components: {
     Banner,
-    WhiteBarInfo
+    MenuBar
   }
 }
 </script>

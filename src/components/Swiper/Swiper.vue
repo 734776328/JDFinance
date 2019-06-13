@@ -32,12 +32,19 @@ export default {
   props: ['img'],
   mounted () {
     setTimeout(()=>{
-      var swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    })
-    },0)
+      var myswiper = new Swiper('.swiper-container', {
+        loop: true,
+        //设置自动滑动 但是用户手动滑动后就不再自动滑动 若想不这样 设置 disableOnInteraction: false
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      })
+    myswiper.init()
+    },2220)
   }
 }
 </script>

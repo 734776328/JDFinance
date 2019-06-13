@@ -22,27 +22,43 @@
         <ImageBanner class="last-img" :imgUrl="'https://img12.360buyimg.com/jrpmobile/jfs/t1/54430/7/1152/31787/5cee32fdE48ba90c6/de76eb0cda423436.jpg?width=750&height=200'"></ImageBanner>
       </div>
       <div class="boundary"></div>
+
+      <!-- 赏金任务 bounty-mission -->
       <div class="bounty-mission">
         <BountyMission></BountyMission>
         <ImageBanner :imgUrl="'https://img12.360buyimg.com/jrpmobile/jfs/t1/7640/35/4322/21318/5bda6023E656cbbbb/b2ddefd7ef80d7aa.png?width=750&height=200'"></ImageBanner>
         <ImageBanner :imgUrl="'https://img12.360buyimg.com/jrpmobile/jfs/t1/37697/16/1334/187953/5cb44c65E5dbefe83/200ce71a4347aeec.png?width=750&height=200'"></ImageBanner>
       </div>
-      <div class="boundary"></div>
+      <div class="boundary"/>
       <!-- 银行精选 -->
       <div>
         <BankSelected/>
       </div>
-      <!-- 白条 -->
-      <div>
-        <WhiteBar/>
+      <div class="boundary"/>
+      
+      <!-- 白条专栏columnist -->
+      <div class="baitiao-columnist">
+        <div class="baitiao-info">
+          <WhiteBar/>
+        </div>
+        <div>
+          <ImageBanner :imgUrl="'https://img12.360buyimg.com/jrpmobile/jfs/t20746/93/1719082958/12040/306a2296/5b31b40dNeefe4c3c.png?width=750&height=200'"/>          
+        </div>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+
+      <!-- 小金库专栏 vault-columnist -->
+      <div class="vault-columnist">
+        <SmallVault/>
+      </div>
+
+      <div class="boundary" />
+
+      <!-- 保险保障专栏 insurance-columnist -->
+      <div class="insurance-columist">
+        <Insurance/>
+      </div>
+
+      <div class="boundary" />
       <br>
   </div>  
 </template>
@@ -54,6 +70,8 @@ import ImageBanner from '../../components/ImageBanner/ImageBanner.vue'
 import BountyMission from '../../components/BountyMission/BountyMission.vue'
 import BankSelected from '../../components/BankSelected/BankSelected.vue'
 import WhiteBar from './WhiteBar/WhiteBar.vue'
+import SmallVault from './SmallVault/SmallVault.vue'
+import Insurance from './Insurance/Insurance.vue'
 export default {
   components: {
     Swiper,
@@ -61,7 +79,9 @@ export default {
     ImageBanner,
     BountyMission,
     BankSelected,
-    WhiteBar
+    WhiteBar,
+    SmallVault,
+    Insurance
   }
 }
 </script>
@@ -116,11 +136,20 @@ export default {
   .bounty-mission
     div
       padding-bottom .15rem
+  .baitiao-columnist
+    background-color #FFFFFF
+    margin-bottom .15rem
+    .baitiao-info
+      margin-bottom .15rem
+      padding .2rem auto
+      background-color #FFFFFF
+  .insurance-columist
+    padding-bottom .2rem
+
   .boundary
     width 100%
     height .1rem
     position relative
-    margin-top -10px
     z-index 9
     background-color #EFF1F4
 </style>
