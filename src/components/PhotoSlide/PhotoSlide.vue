@@ -21,8 +21,8 @@ export default {
   },
   methods: {
     //动态计算ul的宽度
-    computedWidth (count) {
-      this.$refs.content.style.width = count * 125 + count * 16 + 16 + 'px' 
+    computedWidth (length) {
+      this.$refs.content.style.width = length * 125 + length * 16 + 16 + 'px' 
     }
   },
   mounted () {
