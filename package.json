@@ -5,24 +5,24 @@
   "main": "index.js",
   "dependencies": {
     "@better-scroll/core": "^2.0.0-alpha.12",
-    "css-loader": "^2.1.1",
+    "css-loader": "^6.7.3",
     "less": "^3.9.0",
-    "less-loader": "^5.0.0",
-    "style-loader": "^0.23.1",
+    "less-loader": "^11.1.0",
+    "style-loader": "^3.3.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
+    "stylus-loader": "^7.1.0",
     "swiper": "^4.5.0",
-    "url-loader": "^1.1.2",
+    "url-loader": "^4.1.1",
     "vue": "^2.6.10",
-    "vue-loader": "^15.7.0",
+    "vue-loader": "^17.0.1",
     "vue-router": "^3.0.6",
     "vuex": "^3.1.1",
-    "webpack": "^4.32.2"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "vue-template-compiler": "^2.6.10",
-    "webpack-cli": "^3.3.2",
+    "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^3.5.1"
   },
   "scripts": {
